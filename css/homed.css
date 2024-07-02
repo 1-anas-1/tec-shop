@@ -1,0 +1,156 @@
+* {
+    margin : 0;
+    padding: 0;
+
+}
+
+body .main {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-areas:
+    "header header"
+    "nav body";
+
+}
+header {
+    grid-area: header;
+    display:inline-grid ;
+    grid-template-columns: 0.2fr 1fr 0.3fr;
+    align-items: center;
+    text-align: center;
+    background-color:#A2F2E4;
+    color: #031740;
+    
+    
+}
+header h1 {
+    overflow: hidden;
+}
+header form {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+header form input {
+    height: 30px;
+    width: 70%;
+    border: 0ch;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px ;
+    background-color: white;
+    border: 1px #30838C solid;
+    border-right: none;
+}
+
+header form button {
+    height: 30px;
+    width: 5%;
+    border: 0ch;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;
+    background-color: white;
+    border: 1px #30838C solid;
+    border-left:none ;
+}
+header  nav {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    
+}
+aside {
+    display: flex;
+    grid-area: nav;
+    flex-direction:column;
+    background-color:#B6F2EC;
+    align-items: center;
+    /* overflow: hidden; */
+    
+
+
+}
+aside a {
+    height: 10%;
+    width: 95%;
+    font-size: 150%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    position: relative;
+    left: 0px;
+    color: #031740;
+    font-weight: 600;
+    overflow: hidden;
+}
+aside .home{
+    background-color: #9bf2e4;
+}
+aside a:hover:before{
+    content: "";
+    height: 100%;
+    width: 2%;
+    position: absolute;
+    left: 0px;
+
+    background-color:#30838C;
+}
+main{
+    grid-area: body;
+    background-color:white;
+    display: grid;
+    grid-template-rows: 0.2fr 0.5fr 1fr;
+    grid-template-areas:
+    "space"
+    "offer"
+    "parts";
+}
+
+main .BestOffer {
+    display: flex;
+    grid-area: offer;
+    padding: 10px  ;
+    justify-content: space-evenly;
+
+
+    
+    
+    
+}
+main .BestOffer figure {
+    background-color: #30838C;
+    width: 200px;
+    height:200px;
+    border-radius: 10px;
+
+}
+main .BestOffer figure img {
+    width: 100%;
+    height: 80%;
+}
+main .parts {
+    grid-area: parts;
+    display: block;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction:column ;
+    
+}
+main .parts a {
+    
+    width: 98%;
+    height: 19%;
+    display: block;
+    font-size: 200%;
+    text-decoration: none;
+    font-weight: 600;
+    line-height: 250%;
+    background-image:linear-gradient(to right , #031740 , #A2F2E4);
+    border-radius: 20px ;
+
+    margin: auto;
+}
